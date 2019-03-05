@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="STYLiSH 網路服飾品牌，提供平價且高品質的服飾，線上可直接購買女裝、男裝與配飾等。">
+  <title>STYLiSH</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/banner.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/mobile.css">
+  <link rel="stylesheet" href="css/screen.css">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-135272206-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-135272206-1');
+  </script>
+</head>
+
+<body>
+  <header>
+    <img src="./img/logo.png" alt="logo of STYLiSH" class="logo" />
+    <nav class="main-nav">
+      <ul>
+        <li class="womenTab"><a href="#">女裝</a></li>
+        <li class="menTab"><a href="#">男裝</a></li>
+        <li class="accessoriesTab"><a href="#">配件</a></li>
+      </ul>
+    </nav>
+    <div class="header-right-wrapper">
+      <input type="text" class="search-input" />
+      <a href="cart.html" class="cart-button">
+        <img src="./img/cart.png" alt="cart icon" />
+      </a>
+      <a href="javascript:void(0)" class="member-button">
+        <img src="./img/member.png" alt="member icon" />
+      </a>
+    </div>
+    <div class="search-button"></div>
+  </header>
+
+  <nav class="main-nav-mobile">
+    <ul>
+      <li class="womenTab"><a href="#">女裝</a></li>
+      <li class="menTab"><a href="#">男裝</a></li>
+      <li class="accessoriesTab"><a href="#">配件</a></li>
+    </ul>
+  </nav>
+
+  <div class="banner">
+    <div class="slider"></div>
+    <a class="arrow-left" href="javascript:void(0);"></a>
+    <a class="arrow-right" href="javascript:void(0);"></a>
+    <div class="dots-wrapper"></div>
+  </div>
+
+  <div class="row"></div>
+
+  <div class="sticky-footer">
+    <div class="sticky-item">
+      <a href="cart.html" class="sticky-item-wrapper">
+        <div class="sticky-item-img-wrapper cart-button-mobile">
+          <img src="img/cart-mobile.png" alt="shopping cart icon" />
+        </div>
+        <span>購物車</span>
+      </a>
+    </div>
+    <div class="sticky-item">
+      <a href="javascript:void(0)" class="sticky-item-wrapper member-button-mobile">
+        <div class="sticky-item-img-wrapper">
+          <img src="img/member-mobile.png" alt="member icon" />
+        </div>
+        <span>會員</span>
+      </a>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-wrapper">
+      <div class="footer-nav-links">
+        <nav class="footer-nav">
+          <a href="#">關於 Stylish</a>
+          <a href="#">聯絡我們</a>
+          <a href="#">服務條款</a>
+          <a href="#">FAQ</a>
+          <a href="#">隱私政策</a>
+        </nav>
+        <div class="links">
+          <img src="img/line.png" alt="line links" />
+          <img src="img/twitter.png" alt="twitter links" />
+          <img src="img/facebook.png" alt="facebook links" />
+        </div>
+      </div>
+      <div class="copyrights">&copy; 2018. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script src="js/shared/api.js"></script>
+  <script src="js/shared/helper.js"></script>
+  <script src="js/shared/slider.js"></script>
+  <script src="js/shared/facebook.js"></script>
+  <script src="js/shared/initialize.js"></script>
+  <script src="js/shared/search.js"></script>
+  <script src="js/index/getMarketingCampaigns.js"></script>
+  <script src="js/index/getProductBlocksByCategory.js"></script>
+  <script src="js/index/bindTabsClickEvent.js"></script>
+  <script src="js/index/generateBannerList.js"></script>
+  <script src="js/index/generateProductBlocks.js"></script>
+  <script src="js/index/appendProductBlocks.js"></script>
+  <script src="js/index/replaceProductBlocks.js"></script>
+  <script src="js/index/searchProductByKeyword.js"></script>
+  <script src="js/index/bindScrollEvent.js"></script>
+  <script src="js/index/index.js"></script>
+</body>
+
+</html>

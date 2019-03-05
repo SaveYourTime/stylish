@@ -1,0 +1,38 @@
+@media (min-width: 424px) and (max-width: 1023px) {
+  .col:first-child:nth-last-child(1) {
+    width: calc(50% - 3px);
+  }
+}
+
+@media (min-width: 1024px) {
+  .row {
+    max-width: 1160px;
+    margin-top: 70px;
+  }
+
+  .col {
+    width: calc((100% - 80px) / 3);
+  }
+
+  .col:nth-child(2n) {
+    margin-left: unset;
+  }
+
+  .col:not(:nth-child(3n+1)) {
+    margin-left: 40px;
+  }
+
+  .col:first-child:nth-last-child(1) {
+    width: calc((100% - 80px) / 3);
+  }
+
+  .card-content {
+    font-size: 20px;
+    letter-spacing: 4px;
+  }
+
+  .color-block {
+    width: 24px;
+    height: 24px;
+  }
+}

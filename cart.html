@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Cart</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/banner.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/cart-mobile.css">
+  <link rel="stylesheet" href="css/cart-screen.css">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-135272206-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-135272206-1');
+  </script>
+</head>
+
+<body>
+  <header>
+    <img src="./img/logo.png" alt="logo of STYLiSH" class="logo" />
+    <nav class="main-nav">
+      <ul>
+        <li class="womenTab"><a href="index.html?category=women">女裝</a></li>
+        <li class="menTab"><a href="index.html?category=men">男裝</a></li>
+        <li class="accessoriesTab"><a href="index.html?category=accessories">配件</a></li>
+      </ul>
+    </nav>
+    <div class="header-right-wrapper">
+      <input type="text" class="search-input" />
+      <a href="cart.html" class="cart-button">
+        <img src="./img/cart.png" alt="cart icon" />
+      </a>
+      <a href="javascript:void(0)" class="member-button">
+        <img src="./img/member.png" alt="member icon" />
+      </a>
+    </div>
+    <div class="search-button"></div>
+  </header>
+
+  <nav class="main-nav-mobile">
+    <ul>
+      <li class="womenTab"><a href="index.html?category=women">女裝</a></li>
+      <li class="menTab"><a href="index.html?category=men">男裝</a></li>
+      <li class="accessoriesTab"><a href="index.html?category=accessories">配件</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <div class="bread-crumb">HOME > BAG</div>
+    <div class="cart-titles">
+      <div class="cart-title">購物車(3)</div>
+      <div class="table-titles">
+        <div class="product-quantity-title">數量</div>
+        <div class="product-unit-price-title">單價</div>
+        <div class="product-total-title">小計</div>
+        <span></span>
+      </div>
+    </div>
+
+    <div class="first divider"></div>
+    <div class="product-blocks"></div>
+    <div class="deliver-block">
+      <div class="field">
+        <label for="">配送國家</label>
+        <select class="shipping">
+          <option value="1">臺灣及離島</option>
+          <option value="2">海外</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="">付款方式</label>
+        <select class="payment">
+          <option value="1">宅配貨到付款</option>
+          <option value="2">超商取貨付款</option>
+        </select>
+      </div>
+    </div>
+    <div class="notice-wrapper">
+      <span> ※ 提醒您：</span>
+      <ul>
+        <li>選擇宅配-請填寫正確收件人資訊，避免包裹配送不達</li>
+        <li>選擇超商-請填寫正確收件人姓名(與證件相符)，避免無法領取</li>
+      </ul>
+    </div>
+    <div class="order-information">
+      <div class="order-title">訂購資料</div>
+      <div class="divider"></div>
+      <div class="field">
+        <label for="">收件人姓名</label>
+        <input type="text" class="name" />
+        <span>務必填寫完整收件人姓名，避免包裹無法順利簽收</span>
+      </div>
+      <div class="field">
+        <label for="">手機</label>
+        <input type="number" pattern="[0-9]*" inputmode="numeric" class="phone" />
+      </div>
+      <div class="field">
+        <label for="">電子郵件</label>
+        <input type="email" class="email" />
+      </div>
+      <div class="field">
+        <label for="">地址</label>
+        <input type="text" class="address" />
+      </div>
+      <div class="field">
+        <label>配送時間</label>
+        <div class="radios">
+          <div class="radio">
+            <input type="radio" name="deliver-time" class="deliver-time" id="morning" value="morning"
+              checked="checked" />
+            <label for="morning">08:00-12:00</label>
+          </div>
+          <div class="radio">
+            <input type="radio" name="deliver-time" class="deliver-time" id="afternoon" value="afternoon" />
+            <label for="afternoon">14:00-18:00</label>
+          </div>
+          <div class="radio">
+            <input type="radio" name="deliver-time" class="deliver-time" id="anytime" value="anytime" />
+            <label for="anytime">不指定</label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="divider"></div>
+    <div class="order-checkout-wrapper">
+      <div class="tpfields">
+        <div class="field">
+          <label for="card-number">信用卡號碼</label>
+          <div class="tpfield" id="card-number"></div>
+        </div>
+        <div class="field">
+          <label for="card-expiration-date">卡片到期日</label>
+          <div class="tpfield" id="card-expiration-date"></div>
+        </div>
+        <div class="field">
+          <label for="card-ccv">卡片識別碼</label>
+          <div class="tpfield" id="card-ccv"></div>
+        </div>
+      </div>
+      <div class="fee-block">
+        <div class="fee-wrapper">
+          <div class="title">總金額</div>
+          <div class="fee"><span>NT. </span><span class="product-total-amount">1770</span></div>
+        </div>
+        <div class="fee-wrapper">
+          <div class="title">運費</div>
+          <div class="fee"><span>NT. </span><span class="product-freight">30</span></div>
+        </div>
+        <div class="divider"></div>
+        <div class="fee-wrapper">
+          <div class="title">應付金額</div>
+          <div class="fee"><span>NT. </span><span class="should-pay">1800</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="error-wrapper">
+      <p class="error-message">請檢查輸入的內容並重試。</p>
+    </div>
+    <input type="button" value="確認付款" class="confirm-button" disabled="disabled" />
+  </main>
+
+  <div class="sticky-footer">
+    <div class="sticky-item">
+      <a href="cart.html" class="sticky-item-wrapper">
+        <div class="sticky-item-img-wrapper cart-button-mobile">
+          <img src="img/cart-mobile.png" alt="shopping cart icon" />
+        </div>
+        <span>購物車</span>
+      </a>
+    </div>
+    <div class="sticky-item">
+      <a href="javascript:void(0)" class="sticky-item-wrapper member-button-mobile">
+        <div class="sticky-item-img-wrapper">
+          <img src="img/member-mobile.png" alt="member icon" />
+        </div>
+        <span>會員</span>
+      </a>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-wrapper">
+      <div class="footer-nav-links">
+        <nav class="footer-nav">
+          <a href="#">關於 Stylish</a>
+          <a href="#">聯絡我們</a>
+          <a href="#">服務條款</a>
+          <a href="#">FAQ</a>
+          <a href="#">隱私政策</a>
+        </nav>
+        <div class="links">
+          <img src="img/line.png" alt="line links" />
+          <img src="img/twitter.png" alt="twitter links" />
+          <img src="img/facebook.png" alt="facebook links" />
+        </div>
+      </div>
+      <div class="copyrights">&copy; 2018. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script src="js/shared/api.js"></script>
+  <script src="js/shared/helper.js"></script>
+  <script src="js/shared/facebook.js"></script>
+  <script src="js/shared/initialize.js"></script>
+  <script src="js/shared/search.js"></script>
+  <script src="https://js.tappaysdk.com/tpdirect/v4"></script>
+  <script src="js/shared/tappay.js"></script>
+  <script src="js/cart/createProductImage.js"></script>
+  <script src="js/cart/createProductTitle.js"></script>
+  <script src="js/cart/createProductSelection.js"></script>
+  <script src="js/cart/createProductContent.js"></script>
+  <script src="js/cart/createProductExtraContentTitles.js"></script>
+  <script src="js/cart/createProductQuantity.js"></script>
+  <script src="js/cart/createProductExtraContent.js"></script>
+  <script src="js/cart/bindSizeChangeEvent.js"></script>
+  <script src="js/cart/bindRemoveProductEvent.js"></script>
+  <script src="js/cart/buildCart.js"></script>
+  <script src="js/cart/setProductPrice.js"></script>
+  <script src="js/cart/setOrder.js"></script>
+  <script src="js/cart/bindOrderCheckoutEvent.js"></script>
+  <script src="js/cart/changeSubmitButtonState.js"></script>
+  <script src="js/cart/bindCheckFieldsEvent.js"></script>
+  <script src="js/cart/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,2 @@
+buildCart();
+setProductPrice();
